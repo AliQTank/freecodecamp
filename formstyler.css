@@ -18,6 +18,11 @@ form {
 
 }
 
+input, textarea, select {
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
 h1, p {
     margin: 1em auto;
     text-align: center;
@@ -36,3 +41,7 @@ fieldset {
 fieldset:not(:last-child) {
     border-bottom: 3px solid rgb(172, 98, 172);
 }
+
+.inline {
+    width: unset;
+  }
