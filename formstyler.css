@@ -14,7 +14,8 @@ body {
 form {
     margin: 0 auto;
     max-width: 700px;
-    min-width: 400px;;
+    min-width: 400px;
+    padding-bottom: 2em;
 
 }
 
@@ -46,4 +47,15 @@ fieldset:not(:last-child) {
     width: unset;
     margin: 0 0.5em 0 0; /*top right bottom left*/
     vertical-align: middle;
+  }
+
+
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  a {
+    color: #dfdfe2;
   }
