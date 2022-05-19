@@ -32,3 +32,7 @@ fieldset {
     border: none;
     padding: 2rem 0;
 }
+
+fieldset:not(:last-child) {
+    border-bottom: 3px solid rgb(172, 98, 172);
+}
