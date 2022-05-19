@@ -9,12 +9,12 @@
 </head>
 <body>
     <h1>Survey for gamers</h1>
-    <form action="to be defined"></form>
+    <form action="to be defined">
     <fieldset>
-        <label for="">Enter Your First Name: <input type="text" required></label>
-        <label for="">Enter Your Last Name: <input type="text"></label>        
-        <label for="">Enter Your Email: <input type="email" required></label>
-        <label for="">Create a New Password: <input type="password" required pattern="[a-z0-5]{8,}"></label>
+        <label for="">Enter Your First Name: <input type="text" required name="firstname"></label>
+        <label for="">Enter Your Last Name: <input type="text" name="lastname"></label>        
+        <label for="">Enter Your Email: <input type="email" required name="email"></label>
+        <label for="">Create a New Password: <input type="password" required pattern="[a-z0-5]{8,}" name="password"></label>
     </fieldset>
     <fieldset>
         <label for="">
@@ -28,20 +28,25 @@
         </label>
     </fieldset>
     <fieldset>
-        <label for="">Upload a picture <input type="file"></label>
-        <label for="">Enter Your Age: <input type="number" min="18" max="120"></label>
+        <label for="">Upload a picture <input type="file" name="photo"></label>
+        <label for="">Enter Your Age: <input type="number" min="18" max="120" name="age"></label>
         <label for="">Whats your favorite activity
-            <select name="" id="">
-                <option value="">reading</option>
-                <option value="">hiking</option>
-                <option value="">sports</option>
-                <option value="">social networks</option>
-                <option value="">traveling</option>
+            <select name="" id="" name="selection">
+                <option value="0">reading</option>
+                <option value="1">hiking</option>
+                <option value="2">sports</option>
+                <option value="3">social networks</option>
+                <option value="4">traveling</option>
             </select>
+        </label>
+        <label for="">
+            <textarea placeholder="tell us something about you" name="" id="" cols="50" rows="10" name="placeholder"></textarea>
         </label>
         
         
     </fieldset>
+
     <input type="submit" value="Submit">
+</form>
 </body>
 </html>
