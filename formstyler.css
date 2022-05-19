@@ -44,4 +44,6 @@ fieldset:not(:last-child) {
 
 .inline {
     width: unset;
+    margin: 0 0.5em 0 0; /*top right bottom left*/
+    vertical-align: middle;
   }
