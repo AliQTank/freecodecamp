@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=Source+Code+Pro:ital,wght@1,600&display=swap');
+
+* {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+}
+
+body {
+    width: 100%;
+    height: 150vh;
+    margin: 0;
+    background-color: rgb(14, 75, 145);
+    color: blanchedalmond;
+}
+
+label {
+    display: block;
+}
+
+#title, p {
+    text-align: center;
+}
+
+form {
+    max-width: 900px;
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+input[type="text"], input[type="email"], input[type="number"], select, textarea {
+    background-color: rgb(41, 4, 90);
+    color: white;
+}
+    
