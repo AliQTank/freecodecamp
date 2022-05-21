@@ -17,6 +17,16 @@ body {
     color: blanchedalmond;    
 }
 
+form {
+    margin: 0 auto; 
+    padding: 20px;   
+}
+
+fieldset {
+    padding: 2em 0;
+    border-bottom: 2px solid;
+}
+
 label {
     display: block;
 }
@@ -31,19 +41,16 @@ form, #title, p {
     margin: auto;
 }
 
-form {
-    margin: 0 auto; 
-    padding: 20px;   
-}
 
-fieldset {
-    padding: 2em 0;
-    border-bottom: 2px solid;
-}
 
-input {
+
+
+input, textarea, select {
     width: 100%;
-}
+    background-color: rgb(66, 48, 73);
+    color: white;
+    min-height: 2em;
+    }
 
 input[type="submit"] {
     display: block; 
@@ -51,8 +58,10 @@ input[type="submit"] {
     height: 3em;  
     margin: auto;  
     background-color: purple; 
+    color: blanchedalmond;
     opacity: 0.4;   
     cursor: pointer;
+    border: 2px solid whitesmoke;
 
 }
 
@@ -60,5 +69,3 @@ input[type="submit"] {
     width: unset;
     margin: 0 1em 0.3em 0;    
 }
-/*
-
