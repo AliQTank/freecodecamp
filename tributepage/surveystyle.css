@@ -19,7 +19,8 @@ body {
 
 form {
     margin: 0 auto; 
-    padding: 20px;   
+    padding: 20px; 
+    width: 100vh;  
 }
 
 fieldset {
@@ -29,6 +30,7 @@ fieldset {
 
 label {
     display: block;
+    /*margin: 00.5rem 0;*/
 }
 
 form, #title, p {
@@ -40,6 +42,10 @@ form, #title, p {
     text-align: center;
     margin: auto;
 }
+/*
+#name-label {
+    display: ;
+}*/
 
 
 
@@ -63,6 +69,10 @@ input[type="submit"] {
     cursor: pointer;
     border: 2px solid whitesmoke;
 
+}
+
+input[type="text"], input[type="email"], input[type="number"]  {
+    width: 100%;
 }
 
 .inline {
