@@ -2,7 +2,7 @@
 
 * {
     font-family: 'BIZ UDPGothic', sans-serif;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Source Code Pro', monospace;    
 }
 
 body {
@@ -10,7 +10,7 @@ body {
     height: 150vh;
     margin: 0;
     background-color: rgb(14, 75, 145);
-    color: blanchedalmond;
+    color: blanchedalmond;    
 }
 
 label {
@@ -24,7 +24,7 @@ label {
 form {
     max-width: 900px;
     min-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto;    
 }
 
 input[type="text"], input[type="email"], input[type="number"], select, textarea {
