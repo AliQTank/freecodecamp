@@ -6,6 +6,13 @@
           box-sizing: border-box;
 }
 
+body {
+    background-color: goldenrod;
+    font-size: x-large;
+    color: blueviolet;
+    font-family: sans-serif;
+}
+
 #title, header>p {
     text-align: center;
 }
