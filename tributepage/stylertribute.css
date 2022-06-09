@@ -6,7 +6,7 @@
           box-sizing: border-box;
 }
 
-#title {
+#title, header>p {
     text-align: center;
 }
 
