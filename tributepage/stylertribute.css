@@ -1,5 +1,5 @@
 * {
-    border: 2px solid red;
+   /*border: 2px solid black;*/
     margin: 10px 0;
     -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -7,13 +7,67 @@
 }
 
 body {
-    background-color: goldenrod;
+    background-color: black;
     font-size: x-large;
     color: blueviolet;
-    font-family: sans-serif;
+    font-family: serif;
 }
 
-#title, header>p {
+main {
+    background-color: goldenrod;
+}
+
+#title, header>p, main {
     text-align: center;
 }
 
+figure {
+    padding: 10px;
+    height: max-content;
+    background-color: black;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    background: white;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+blockquote{
+    font-size: large;
+    margin: 50px 150px;
+    font-style: italic;
+    
+
+}
+
+/*
+#image {
+    max-width: 100%;
+    height: auto;
+    background: white;
+    margin-right: auto;
+    margin-left: auto;
+
+}*/
+
+#achievements {
+    width: max-content;
+    margin: 20px auto;
+}
+
+#quotes {
+    list-style: none;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+
+/*background-color: goldenrod*/
