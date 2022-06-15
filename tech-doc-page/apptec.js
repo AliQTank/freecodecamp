@@ -1,0 +1,1 @@
+const mourningGlory = "Hello World";
