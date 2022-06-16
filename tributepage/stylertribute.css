@@ -2,7 +2,7 @@
     --background-color1: black;
     --background-color2: goldenrod;
     --background-color3: silver;
-    --background-color4: gold;
+    --background-color4: rgb(252, 236, 145);
     --text-color1: blueviolet;
 }
 
@@ -20,6 +20,7 @@ body {
     font-size: x-large;
     color: var(--text-color1);
     font-family: serif;
+    margin: 0;
 }
 
 main {
@@ -34,6 +35,13 @@ figure {
     padding: 10px;
     height: max-content;
     background-color: var(--background-color4);
+    background: linear-gradient(
+        var(--background-color2) 0%,
+        var(--background-color4) 50%,
+        var(--background-color4) 50%,
+        var(--background-color2) 100%
+
+    );
 }
 
 img {
@@ -71,6 +79,9 @@ blockquote{
     list-style: none;
 }
 
+ul {
+    font-size: small;
+}
 /*
 
 /*background-color: goldenrod*/
