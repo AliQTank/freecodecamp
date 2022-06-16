@@ -1,3 +1,12 @@
+:root {
+    --background-color1: black;
+    --background-color2: goldenrod;
+    --background-color3: silver;
+    --background-color4: gold;
+    --text-color1: blueviolet;
+}
+
+
 * {
    /*border: 2px solid black;*/
     margin: 10px 0;
@@ -7,14 +16,14 @@
 }
 
 body {
-    background-color: black;
+    background-color: var(--background-color3);
     font-size: x-large;
-    color: blueviolet;
+    color: var(--text-color1);
     font-family: serif;
 }
 
 main {
-    background-color: goldenrod;
+    background-color: var(--background-color2);
 }
 
 #title, header>p, main {
@@ -24,7 +33,7 @@ main {
 figure {
     padding: 10px;
     height: max-content;
-    background-color: black;
+    background-color: var(--background-color4);
 }
 
 img {
@@ -44,15 +53,14 @@ blockquote{
 
 }
 
-/*
+
 #image {
     max-width: 100%;
     height: auto;
     background: white;
     margin-right: auto;
     margin-left: auto;
-
-}*/
+}
 
 #achievements {
     width: max-content;
@@ -63,11 +71,6 @@ blockquote{
     list-style: none;
 }
 
-.gallery {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-}
-
+/*
 
 /*background-color: goldenrod*/
