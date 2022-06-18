@@ -9,7 +9,7 @@
 
 * {
    /*border: 2px solid black;*/
-    margin: 10px 0;
+    margin: 0;
     -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -55,18 +55,7 @@ img {
 blockquote{
     font-size: large;
     margin: 50px 150px;
-    font-style: italic;
-    
-
-}
-
-
-#image {
-    max-width: 100%;
-    height: auto;
-    background: white;
-    margin-right: auto;
-    margin-left: auto;
+    font-style: italic;    
 }
 
 #achievements {
