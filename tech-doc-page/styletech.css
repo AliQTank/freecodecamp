@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    font-size: x-large;
+}
+
+code {
+    background-color: azure;
+}
+
+code.input {
+    border: 1px solid greenyellow;
+}
+
+code.output {
+    border: 1px solid orangered;    
+}
