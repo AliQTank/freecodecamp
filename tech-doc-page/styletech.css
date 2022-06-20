@@ -1,6 +1,7 @@
 :root {
     --base-color1: blanchedalmond;
     --base-color2: orangered;
+    --base-color3: rgb(220, 225, 150);
 }
 
 
@@ -68,5 +69,11 @@ nav>ul>li>a {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;   
+    }
+
+    @media only screen and (max-width: 600px) {
+        body {
+            background-color: var(--base-color3);
+        }
     }
   
