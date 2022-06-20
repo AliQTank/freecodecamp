@@ -9,8 +9,8 @@
 </head>
 <body>
     <nav id="navbar"> <!-- requirement #8-->
-        <header> <h1>Shell Documentation</h1> </header>
-        <ul> <!--requirement #10 one a element for every main-section element -->
+       
+        <ul> <header>The Unix Shell </header> <!--requirement #10 one a element for every main-section element -->
             <li><a class="nav-link" href="#Introduction">Introduction</a><!--requirement #12 --></li>
             <li><a class="nav-link" href="#Navigating_Files_and_Directories">Navigating Files and Directories</a><!--requirement #12 --></li>
             <li><a class="nav-link" href="#Working_With_Files_and_Directories">Working With Files and Directories</a><!--requirement #12 --></li>
@@ -21,7 +21,9 @@
         </ul>
     </nav>
     <main id="main-doc"> <!-- requirement #1 -->
+        <header> <h1>Shell Documentation</h1> </header>
     <section id="Introduction" class="main-section"> <!-- requirements #2 --> <!-- requirements #4 --> 
+        
         <header><h1>Introduction</h1> </header> <!--requirements #3 -->
         <p>Shell is defined as a CLI (Command Line Interface) where Users can type commands.</p> <!--requirements #5 -->
         <code class="input">$ ls</code>    
@@ -33,14 +35,14 @@
         <h3>Exploring Other Directories</h3>
         <code class="input">ls -F</code>
         <p>to take a look at others Directories</p>
-        <code class="input">ls -F Desktop/shell-lesson-data</code>
+        <code class="input">ls -F Desktop/shell-lesson-data</code> <br>
         <code class="output">output exercise-data/  north-pacific-gyre/</code>
         <p>to change directory there is a command very similar to ls</p>
-        <code class="input">cd Desktop</code>
-        <code class="input">cd shell-lesson-data</code>
+        <code class="input">cd Desktop</code> <br>
+        <code class="input">cd shell-lesson-data</code> <br>
         <code class="input">cd exercise-data</code>
         <p>we are now in /Users/nelle/Desktop/shell-lesson-data/exercise-data</p>
-        <code class="input">$ pwd</code>
+        <code class="input">$ pwd</code> <br>
         <code class="output">/Users/nelle/Desktop/shell-lesson-data/exercise-data</code>
         <p>to move one directory up</p>
         <code class="input">$ cd ..</code>
@@ -57,7 +59,7 @@
         <p>to create a directory nested into direct parent folder</p>
         <code class="input">$ mkdir -p ../project/data ../project/results</code>
         <p>the <code>-R</code>option to the <code>ls</code> command will list all nested subdirectories within a directory. Let’s use ls -FR to recursively list the new directory hierarchy we just created in the project directory:</p>
-        <code class="input">$ ls -FR ../project</code>
+        <code class="input">$ ls -FR ../project</code> <br>
         <code class="output">../project/:
             data/  results/
             
@@ -66,8 +68,8 @@
             ../project/results:</code>
             <h3>Create a text file</h3>
             <p>Let’s change our working directory to thesis using cd, then run a text editor called Nano to create a file called draft.txt:</p>
-            <code class="input">$ cd thesis
-                $ nano draft.txt</code>
+            <code class="input">$ cd thesis </code> <br>
+               <code class="input">$ nano draft.txt</code>
                 <p>When we say, ‘nano is a text editor’ we really do mean ‘text’: it can only work with plain character data, not tables, 
                     images, or any other human-friendly media. </p>
                     <p>Let’s type in a few lines of text. Once we’re happy with our text, 
@@ -75,7 +77,7 @@
                         (we’ll be asked what file we want to save this to: press Return to accept the suggested default of draft.txt).</p>
                         <img src="https://swcarpentry.github.io/shell-novice/fig/nano-screenshot.png" alt="nano photo">
                         <p>Once our file is saved, we can use Ctrl+X to quit the editor and return to the shell.</p>
-                        <code class="input">$ ls</code>
+                        <code class="input">$ ls</code> <br>
                         <code class="output">draft.txt</code>
                         <p>We have seen how to create text files using the nano editor. Now, try the following command:</p>
                         <code class="input">$ touch my_file.txt</code>
@@ -94,7 +96,7 @@
                             <p>The first argument tells mv what we’re ‘moving’, while the second is where it’s to go. In this case, 
                                 we’re moving thesis/draft.txt to thesis/quotes.txt, which has the same effect as renaming the file. Sure enough, 
                                 ls shows us that thesis now contains one file called quotes.txt:</p>
-                                <code class="input">$ ls thesis</code>
+                                <code class="input">$ ls thesis</code> <br>
                                 <code class="output">quotes.txt</code>   
                                 <p>One must be careful when specifying the target file name, since mv will silently overwrite any existing file with the same name,
                                     which could lead to data loss. An additional option, mv -i (or mv --interactive), can be used to make mv ask you for confirmation
@@ -105,19 +107,19 @@
                                         is called ‘move’.) In this case, the directory name we use is the special directory name . that we mentioned earlier.</p>
                                         <code class="input">$ mv thesis/quotes.txt .</code>      
                                         <p>The effect is to move the file from the directory it was in to the current working directory. ls now shows us that thesis is empty:</p>
-                                        <code class="input">$ ls thesis</code>
+                                        <code class="input">$ ls thesis</code> <br>
                                         <code class="output">$</code>
                                         <p>Alternatively, we can confirm the file quotes.txt is no longer present in the thesis directory by explicitly trying to list it:</p>
                                         <h3>Copying files and directories</h3>
                                         <p>The cp command works very much like mv, except it copies a file instead of moving it. We can check that it did the right thing
                                             using ls with two paths as arguments — like most Unix commands, ls can be given multiple paths at once:</p>
                                             <code class="input">$ cp quotes.txt thesis/quotations.txt
-                                                $ ls quotes.txt thesis/quotations.txt</code>
+                                                $ ls quotes.txt thesis/quotations.txt</code> <br>
                                                 <code class="output"> quotes.txt   thesis/quotations.txt</code> 
                                                 <p>We can also copy a directory and all its contents by using the recursive option -r, e.g. to back up a directory:</p>
                                                 <code class="input">$ cp -r thesis thesis_backup</code>
                                                 <p>We can check the result by listing the contents of both the thesis and thesis_backup directory:</p>
-                                                <code class="input">$ ls thesis thesis_backup</code>
+                                                <code class="input">$ ls thesis thesis_backup</code> <br>
                                                 <code class="output">thesis:
                                                     quotations.txt
                                                     
@@ -134,17 +136,17 @@
              existing programs in new ways. We’ll start with the directory shell-lesson-data/exercise-data/proteins that contains six files describing
               some simple organic molecules. The .pdb extension indicates that these files are in Protein Data Bank format, a simple text format that 
               specifies the type and position of each atom in the molecule.</p>
-        <code class="input">$ ls proteins</code>
+        <code class="input">$ ls proteins</code> <br>
         <code class="output">cubane.pdb    methane.pdb    pentane.pdb
             ethane.pdb    octane.pdb     propane.pdb</code>
             <p>Let’s go into that directory with cd and run an example command wc cubane.pdb:</p>
-            <code class="input">$ cd proteins
-                $ wc cubane.pdb</code>
+            <code class="input">$ cd proteins <br>
+                $ wc cubane.pdb</code> <br>
             <code class="output">20  156 1158 cubane.pdb</code>  
             <p>wc is the ‘word count’ command: it counts the number of lines, words, and characters in files (from left to right, in that order).</p> 
             <p>If we run the command wc *.pdb, the * in *.pdb matches zero or more characters, so the shell turns *.pdb into a list of all .pdb files
                  in the current directory:</p>
-            <code class="input">$ wc *.pdb</code>   
+            <code class="input">$ wc *.pdb</code>   <br>
             <code class="output">  20  156  1158  cubane.pdb
                 12  84   622   ethane.pdb
                  9  57   422   methane.pdb
@@ -154,7 +156,7 @@
                107  819  6081  total</code>  
             <p>Note that wc *.pdb also shows the total number of all lines in the last line of the output.</p>
             <p>If we run wc -l instead of just wc, the output shows only the number of lines per file:</p>
-            <code class="input">$ wc -l *.pdb</code>
+            <code class="input">$ wc -l *.pdb</code> <br>
             <code class="output">  20  cubane.pdb
                 12  ethane.pdb
                  9  methane.pdb
@@ -171,11 +173,11 @@
                 (This is why there is no screen output: everything that wc would have printed has gone into the file lengths.txt instead.) 
                 The shell will create the file if it doesn’t exist. If the file exists, it will be silently overwritten, 
                 which may lead to data loss and thus requires some caution. ls lengths.txt confirms that the file exists:</p>
-                <code class="input">$ ls lengths.txt</code>
+                <code class="input">$ ls lengths.txt</code> <br>
                 <code class="output">lengths.txt</code>
                 <p>We can now send the content of lengths.txt to the screen using cat lengths.txt. The cat command gets its name from ‘concatenate’ i.e. join together,
                      and it prints the contents of files one after another. There’s only one file in this case, so cat just shows us what it contains:</p>
-                <code class="input">$ cat lengths.txt</code>
+                <code class="input">$ cat lengths.txt</code> <br>
                 <code class="output">  20  cubane.pdb
                     12  ethane.pdb
                      9  methane.pdb
@@ -191,14 +193,14 @@
                     2
                     19
                     22
-                    6</code>
-                  <code class="input">$ sort numbers.txt</code>
+                    6</code> <br>
+                  <code class="input">$ sort numbers.txt</code> <br>
                   <code class="output">10
                     19
                     2
                     22
-                    6</code>  
-                   <code class="input">$· sort -n numbers.txt</code>
+                    6</code>  <br>
+                   <code class="input">$ sort -n numbers.txt</code> <br>
                    <code class="output">2
                     6
                     10
@@ -223,10 +225,10 @@
             <code class="input">$ for filename in basilisk.dat minotaur.dat unicorn.dat
                 > do
                 >     head -n 2 $filename | tail -n 1
-                > done</code>  
-            <code class="output">CLASSIFICATION: basiliscus vulgaris
-                CLASSIFICATION: bos hominus
-                CLASSIFICATION: equus monoceros</code>
+                > done</code>  <br>
+            <code class="output">CLASSIFICATION: basiliscus vulgaris 
+                CLASSIFICATION: bos hominus 
+                CLASSIFICATION: equus monoceros</code> 
         <p>The shell prompt changes from $ to > and back again as we were typing in our loop. The second prompt, >, is different to remind us
              that we haven’t finished typing a complete command yet. A semicolon, ;, can be used to separate two commands written on a single line.</p>  
         <p>When the shell sees the keyword for, it knows to repeat a command (or group of commands) once for each item in a list. 
@@ -265,7 +267,7 @@
             Check that the directory proteins now contains a file called middle.sh.</p>    
         <p>Once we have saved the file, we can ask the shell to execute the commands it contains. Our shell is called bash, 
             so we run the following command:</p>    
-        <code class="input">$ bash middle.sh</code>   
+        <code class="input">$ bash middle.sh</code>   <br>
         <code class="output">
             ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
 ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
@@ -277,15 +279,26 @@ ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
         <p>What if we want to select lines from an arbitrary file? We could edit middle.sh each time to change the filename, 
             but that would probably take longer than typing the command out again in the shell and executing it with a new file name. 
             Instead, let’s edit middle.sh and make it more versatile:</p>
-        <code>$ nano middle.sh</code>
+        <code>$ nano middle.sh</code> <br>
         <code class="input bash">head -n 15 "$1" | tail -n 5</code>
         <p>Inside a shell script, $1 means ‘the first filename (or other argument) on the command line’. We can now run our script like this:</p>
-        <code class="input">$ bash middle.sh octane.pdb</code>
+        <code class="input">$ bash middle.sh octane.pdb</code> <br>
         <code class="output">ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
             ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
             ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
             ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
             ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00</code>
+            <hr>
+            <ul>Key points
+                <li>Save commands in files (usually called shell scripts) for re-use.</li>
+                <li>bash [filename] runs the commands saved in a file.</li>
+                <li>$@ refers to all of a shell script’s command-line arguments.</li>
+                <li>$1, $2, etc., refer to the first command-line argument, the second command-line argument, etc.</li>
+                <li>Place variables in quotes if the values might have spaces in them.</li>
+                <li>Letting users decide what files to process is more flexible and more consistent with built-in Unix commands.</li>
+            </ul>
+
+
     </section>
     <section id="Finding_Things" class="main-section">
         <header><h1>Finding Things</h1></header>
@@ -296,7 +309,7 @@ ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
             taken from a 1998 competition in Salon magazine. For this set of examples, we’re going to be working in the writing subdirectory:</p>
         <code class="input">$ cd
             $ cd Desktop/shell-lesson-data/exercise-data/writing
-            $ cat haiku.txt</code>
+            $ cat haiku.txt</code> 
          <code class="output">The Tao that is seen
             Is not the true Tao, until
             You bring fresh toner.
@@ -309,42 +322,42 @@ ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
             Today it is not working
             Software is like that.</code>   
         <p>Let’s find lines that contain the word ‘not’:</p>
-        <code class="input">$ grep not haiku.txt</code>
+        <code class="input">$ grep not haiku.txt</code> <br>
         <code class="output">Is not the true Tao, until
             "My Thesis" not found
             Today it is not working</code>
         <p>Let’s search for the pattern: ‘The’.</p>    
-        <code class="input">$ grep The haiku.txt</code>
+        <code class="input">$ grep The haiku.txt</code> <br>
         <code class="output">The Tao that is seen
             "My Thesis" not found.</code>
         <p>This time, two lines that include the letters ‘The’ are outputted, one of which contained our search pattern within a larger word, 
             ‘Thesis’.</p>
         <p>To restrict matches to lines containing the word ‘The’ on its own, we can give grep with the -w option. 
             This will limit matches to word boundaries.</p>   
-        <code class="input">$ grep -w The haiku.txt</code> 
+        <code class="input">$ grep -w The haiku.txt</code>  <br>
         <code class="output">The Tao that is seen</code>
         <p>Note that a ‘word boundary’ includes the start and end of a line, so not just letters surrounded by spaces. 
             Sometimes we don’t want to search for a single word, but a phrase. This is also easy to do with grep by putting the phrase in quotes.</p>
-        <code class="input">$ grep -w "is not" haiku.txt</code>
+        <code class="input">$ grep -w "is not" haiku.txt</code><br>
         <code class="output">Today it is not working</code>
         <p>Another useful option is -n, which numbers the lines that match:</p>
-        <code class="input">$ grep -n "it" haiku.txt</code>
+        <code class="input">$ grep -n "it" haiku.txt</code><br>
         <code class="output">5:With searching comes loss
             9:Yesterday it worked
             10:Today it is not working</code>
         <p>Here, we can see that lines 5, 9, and 10 contain the letters ‘it’.</p>  
         <p>We can combine options (i.e. flags) as we do with other Unix commands. For example, let’s find the lines that contain the word ‘the’. 
             We can combine the option -w to find the lines that contain the word ‘the’ and -n to number the lines that match:</p>  
-        <code class="input">$ grep -n -w "the" haiku.txt</code>  
+        <code class="input">$ grep -n -w "the" haiku.txt</code>  <br>
         <code class="output">2:Is not the true Tao, until
             6:and the presence of absence:</code>
         <p>Now we want to use the option -i to make our search case-insensitive:</p>
-        <code class="input">$ grep -n -w -i "the" haiku.txt</code>
+        <code class="input">$ grep -n -w -i "the" haiku.txt</code><br>
         <code class="output">1:The Tao that is seen
             2:Is not the true Tao, until
             6:and the presence of absence:</code>
         <p>Now, we want to use the option -v to invert our search, i.e., we want to output the lines that do not contain the word ‘the’.</p>
-        <code class="input">$ grep -n -w -v "the" haiku.txt</code>
+        <code class="input">$ grep -n -w -v "the" haiku.txt</code><br>
         <code class="output">1:The Tao that is seen
             3:You bring fresh toner.
             4:
@@ -356,7 +369,7 @@ ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
             11:Software is like that.</code>
         <p>If we use the -r (recursive) option, grep can search for a pattern recursively through a set of files in subdirectories.</p>    
         <p>Let’s search recursively for Yesterday in the shell-lesson-data/exercise-data/writing directory:</p>
-        <code class="input">$ grep -r Yesterday .</code>
+        <code class="input">$ grep -r Yesterday .</code><br>
         <code class="output">
             ./LittleWomen.txt:"Yesterday, when Aunt was asleep and I was trying to be as still as a
 ./LittleWomen.txt:Yesterday at dinner, when an Austrian officer stared at us and then
