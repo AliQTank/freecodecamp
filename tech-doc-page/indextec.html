@@ -29,6 +29,13 @@
         <code class="input">$ ls</code>    
         <p>This command will list the contents of the current directory:</p>
         <code class="output">output:</code>
+        <ul class="key-points">key points
+            <li>A shell is a program whose primary purpose is to read commands and run other programs.</li>
+            <li>The shell’s main advantages are its high action-to-keystroke ratio, its support for automating repetitive tasks, and its capacity to access networked machines.</li>
+            <li>The shell’s main disadvantages are its primarily textual nature and how cryptic its commands and operation can be.</li>
+        </ul>
+
+
     </section> 
     <section id="Navigating_Files_and_Directories" class="main-section"> <!-- requirements #2 --> <!-- requirements #4 --> 
         <header><h1>Navigating Files and Directories</h1></header> <!--requirements #3 -->
@@ -50,6 +57,15 @@
         <code class="input">$ cd ../..</code>
         <p>to get back to root directory</p>
         <code class="input">$ cd</code>
+       
+
+        <ul class="key-points">
+            <li>pwd prints the user’s current working directory.</li>
+            <li>Directory names in a path are separated with / on Unix, but \ on Windows.</li>
+            <li>An <b>Absolute</b> path specifies a location from the root of the file system.</li>
+            <li>A <b>relative</b> path specifies a location starting from the current location.</li>
+            <li>. on its own means ‘the current directory’; .. means ‘the directory above the current one’.</li>
+        </ul>    
     </section>
     <section id="Working_With_Files_and_Directories" class="main-section"> <!-- requirements #2 --> <!-- requirements #4 --> 
         <header><h1>Working With Files and Directories</h1></header> <!--requirements #3 -->
@@ -92,41 +108,55 @@
                         <code class="input">$ cd ~/Desktop/shell-lesson-data/exercise-data/writing</code>
                         <p>In our thesis directory we have a file draft.txt which isn’t a particularly informative name, so let’s change the file’s name using mv, 
                             which is short for ‘move’:</p>
-                            <code class="input">$ mv thesis/draft.txt thesis/quotes.txt</code>    
-                            <p>The first argument tells mv what we’re ‘moving’, while the second is where it’s to go. In this case, 
+                        <code class="input">$ mv thesis/draft.txt thesis/quotes.txt</code>    
+                        <p>The first argument tells mv what we’re ‘moving’, while the second is where it’s to go. In this case, 
                                 we’re moving thesis/draft.txt to thesis/quotes.txt, which has the same effect as renaming the file. Sure enough, 
                                 ls shows us that thesis now contains one file called quotes.txt:</p>
-                                <code class="input">$ ls thesis</code> <br>
-                                <code class="output">quotes.txt</code>   
-                                <p>One must be careful when specifying the target file name, since mv will silently overwrite any existing file with the same name,
+                        <code class="input">$ ls thesis</code> <br>
+                        <code class="output">quotes.txt</code>   
+                        <p>One must be careful when specifying the target file name, since mv will silently overwrite any existing file with the same name,
                                     which could lead to data loss. An additional option, mv -i (or mv --interactive), can be used to make mv ask you for confirmation
                                     before overwriting.</p> 
-                                    <p>Note that mv also works on directories.</p>
-                                    <p>Let’s move quotes.txt into the current working directory. We use mv once again, but this time we’ll use just the name of a directory
+                        <p>Note that mv also works on directories.</p>
+                        <p>Let’s move quotes.txt into the current working directory. We use mv once again, but this time we’ll use just the name of a directory
                                         as the second argument to tell mv that we want to keep the filename but put the file somewhere new. (This is why the command
                                         is called ‘move’.) In this case, the directory name we use is the special directory name . that we mentioned earlier.</p>
-                                        <code class="input">$ mv thesis/quotes.txt .</code>      
-                                        <p>The effect is to move the file from the directory it was in to the current working directory. ls now shows us that thesis is empty:</p>
-                                        <code class="input">$ ls thesis</code> <br>
-                                        <code class="output">$</code>
-                                        <p>Alternatively, we can confirm the file quotes.txt is no longer present in the thesis directory by explicitly trying to list it:</p>
-                                        <h3>Copying files and directories</h3>
-                                        <p>The cp command works very much like mv, except it copies a file instead of moving it. We can check that it did the right thing
+                        <code class="input">$ mv thesis/quotes.txt .</code>      
+                        <p>The effect is to move the file from the directory it was in to the current working directory. ls now shows us that thesis is empty:</p>
+                        <code class="input">$ ls thesis</code> <br>
+                        <code class="output">$</code>
+                        <p>Alternatively, we can confirm the file quotes.txt is no longer present in the thesis directory by explicitly trying to list it:</p>
+                        <h3>Copying files and directories</h3>
+                        <p>The cp command works very much like mv, except it copies a file instead of moving it. We can check that it did the right thing
                                             using ls with two paths as arguments — like most Unix commands, ls can be given multiple paths at once:</p>
-                                            <code class="input">$ cp quotes.txt thesis/quotations.txt
+                        <code class="input">$ cp quotes.txt thesis/quotations.txt
                                                 $ ls quotes.txt thesis/quotations.txt</code> <br>
-                                                <code class="output"> quotes.txt   thesis/quotations.txt</code> 
-                                                <p>We can also copy a directory and all its contents by using the recursive option -r, e.g. to back up a directory:</p>
-                                                <code class="input">$ cp -r thesis thesis_backup</code>
-                                                <p>We can check the result by listing the contents of both the thesis and thesis_backup directory:</p>
-                                                <code class="input">$ ls thesis thesis_backup</code> <br>
-                                                <code class="output">thesis:
+                        <code class="output"> quotes.txt   thesis/quotations.txt</code> 
+                        <p>We can also copy a directory and all its contents by using the recursive option -r, e.g. to back up a directory:</p>
+                        <code class="input">$ cp -r thesis thesis_backup</code>
+                        <p>We can check the result by listing the contents of both the thesis and thesis_backup directory:</p>
+                        <code class="input">$ ls thesis thesis_backup</code> <br>
+                        <code class="output">thesis:
                                                     quotations.txt
                                                     
                                                     thesis_backup:
                                                     quotations.txt</code>
+                        <ul class="key-points">
+                            <li>cp [old] [new] copies a file.</li>
+                             <li>mkdir [path] creates a new directory.</li>
+                            <li>mv [old] [new] moves (renames) a file or directory.</li>
+                            <li>rm [path] removes (deletes) a file.</li>
+                            <li>* matches zero or more characters in a filename, so *.txt matches all files ending in .txt.</li>
+                             <li>? matches any single character in a filename, so ?.txt matches a.txt but not any.txt.</li>
+                             <li>Use of the Control key may be described in many ways, including Ctrl-X, Control-X, and ^X</li>
+                            <li>The shell does not have a trash bin: once something is deleted, it’s really gone.</li>
+                            <li>Most files’ names are something.extension. The extension isn’t required, and doesn’t guarantee anything, but is normally used to indicate the type of data in the file.</li>
+                          <li>Depending on the type of work you do, you may need a more powerful text editor than Nano.</li>
+                                
+                        </ul>                            
+                                                
                                                     
-                                                </section>
+                        </section>
 
                 
 
@@ -206,6 +236,18 @@
                     10
                     19
                     22</code> 
+                    <ul class="key-points">
+                        <li>wc counts lines, words, and characters in its inputs.</li>
+                        <li>cat displays the contents of its inputs.</li>
+                        <li>sort sorts its inputs.</li>
+                        <li>head displays the first 10 lines of its input.</li>
+                        <li>tail displays the last 10 lines of its input.</li>
+                        <li>command > [file] redirects a command’s output to a file (overwriting any existing content).</li>
+                        <li>command >> [file] appends a command’s output to a file.</li>
+                        <li>[first] | [second] is a pipeline: the output of the first command is used as the input to the second.</li>
+                        <li>The best way to use the shell is to use pipes to combine simple single-purpose programs (filters).</li>
+                    </ul>
+                    
 
     </section>
     <section id="Loops" class="main-section"> <!-- requirements #2 --> <!-- requirements #4 --> 
