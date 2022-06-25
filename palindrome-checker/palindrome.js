@@ -1,5 +1,11 @@
 function palindrome(str) {
-    return true;
+  const splitter = str.split("") //still experimenting until ending freecodecamp ceritification projects 
+    return splitter;
   }
   
-  palindrome("eye");
+  //palindrome("eye");
+
+  let palindromeChecker = palindrome("snake");
+  console.log(palindromeChecker);
+
+
