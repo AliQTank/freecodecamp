@@ -1,3 +1,28 @@
+body {
+    background: linear-gradient(90deg, violet, #5dc1b9);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+    background: linear-gradient(lightblue, gray)
+}
+
+/*this is not working*/
+header div {
+    flex-shrink: 1;
+}
+
+/*this is not working*/
+header nav {
+    flex-shrink: 1;
+}
+
+
 section {
     margin-bottom: 300px;
 }
@@ -7,3 +32,51 @@ img {
     height: auto;
 }
 
+.navigator {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    margin-top: 200px;
+}
+
+#victoria-xavier-demo {
+    display: flex;
+}
+
+#video {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+    gap: 85px;
+}
+
+.bikini-options {
+    width: 350px;
+    height: 440px;
+    border: 2px solid red;  
+    text-align: center; 
+
+}
+
+.bikini-options img {
+    width: 200px;
+    height: auto;
+    /*margin-right: auto;
+    margin-left: auto;*/
+}
+
+
+
+
+@media (max-width: 600px) {
+    body {
+        background: linear-gradient(90deg, pink, yellow);
+    }
+} 
