@@ -1,25 +1,44 @@
+:root {
+    --color-opt01: linear-gradient(90deg, violet, #5dc1b9);
+    --color-opt02: linear-gradient(lightblue, gray);
+    --color-opt03: linear-gradient(90deg,white, pink, white);
+}
+
 body {
-    background: linear-gradient(90deg, violet, #5dc1b9);
+    background: var(--color-opt03);
+    margin: 0;
+    box-sizing: border-box;
 }
 
 header {
     position: fixed;
     top: 0;
-    display: flex;
+    display: flex;    
     width: 100%;
     width: -webkit-fill-available;
-    justify-content: space-between;
-    background: linear-gradient(lightblue, gray)
+    justify-content: left;
+    background: var(--color-opt03);
 }
 
 /*this is not working*/
 header div {
-    flex-shrink: 1;
+    flex-basis: 2 2 150px;
 }
 
 /*this is not working*/
 header nav {
-    flex-shrink: 1;
+    flex-basis: 1 1 150px;
+    width: 70%;
+    
+}
+
+header nav li {
+    list-style: none;
+}
+
+header nav li a{
+    font-weight: 600;
+    text-decoration: none;
 }
 
 
@@ -41,8 +60,25 @@ img {
     margin-top: 200px;
 }
 
+#form-container {
+    padding-top: 200px;
+    text-align: center;
+}
+
+#details {
+    border: 2px solid black;
+    width: 900px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    /* have not figured out how to move this section
+    padding-left: 30%;
+    */
+}
+
 #victoria-xavier-demo {
     display: flex;
+    padding-top: 200px;
 }
 
 #video {
@@ -51,10 +87,12 @@ img {
 }
 
 #products {
+    padding-top: 200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;    
     gap: 85px;
+    
 }
 
 .bikini-options {

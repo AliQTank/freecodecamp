@@ -10,6 +10,7 @@
 </head>
 <body>
     <header id="header">
+        <!--this sections needs to be aligned still, flex is not working the way i want-->
         <div>
             <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Female_black_symbol.svg/2048px-Female_black_symbol.svg.png" alt="image to apply">
             <i class="fa-solid fa-venus"></i>
@@ -25,16 +26,24 @@
     </header>   
     <div class="container">
         <section id="form-container">
+            <h2>for news about fashion, please subscribe</h2>
+            <!--This section is not yet started-->
             <form id="form" action="https://www.freecodecamp.com/email-submit">
                 <input name="email" id="email" type="email" required placeholder="enter-email">
                 <input id="submit" type="submit" value="subscribe">
             </form>
         </section>
-        <section id="details"></section>
+        <section id="details">
+            <div>
+                <h3>Lorem punto com</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione dicta minus autem? Natus aliquid odio similique magnam ab debitis placeat inventore, deleniti neque totam, impedit minima ipsam corporis! Quibusdam, sequi?</p>
+            </div>
+        </section>
         <section id="victoria-xavier-demo">
             <iframe id="video" src="https://www.youtube-nocookie.com/embed/JnZw2jW9148" frameborder="0" width="1120" height="630" allowfullscreen > </iframe>
         </section>
         <section id="products">
+            <!--images have to get automatic adjustment according to its own container-->
             <div id="bikini_1" class="bikini-options">
                 <p>1.Beaches And Moonlight 3 Piece Sunsuit Set - Rust</p>
                 <h2>USD $41.99</h2>
@@ -107,7 +116,14 @@
             </div>
         </section>
         <footer>
-            <span>all rights reserved to Victoria Xavier</span>
+            
+            <ul>
+                <li><a href="">Victoria Xavier YouTube channel</a></li>
+                <li><a href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbnRoX0pwWmZUMjVSaVVXVGhmeU92MWVDSjRDUXxBQ3Jtc0tuemhHcG55ZlVtYUR6Zk5aZUJycHVaTk1VY3FoRUwyaEhURWVXMnBLenRfVkRaUUFUbDlUQks2R3BENlJRUG9WZkZzN09nQS1ZTktuU3Z5MzF4Ti0zR1BFc0ozTmY0RG5GNG1BbzV0VXJHbzRYSTlVVQ&q=https%3A%2F%2Flinktr.ee%2FVictoriaxavier&v=JnZw2jW9148">Victoria Xavier Links</a></li>
+                <li><a href="">fashion Nova collection</a></li>
+            </ul> 
+            <!--section not filled yet, some links to add, and rights given to authors and performers, specifiy non-profit purponse of this exercise-->
+            <span>all rights reserved to Victoria Xavier ande fashion nova collection and models</span>
         </footer>
     </div>     
 </body>
